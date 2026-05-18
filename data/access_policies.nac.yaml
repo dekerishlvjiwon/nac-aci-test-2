@@ -1,0 +1,1383 @@
+---
+apic:
+  access_policies:
+    infra_vlan: 3967
+
+    # mcp:
+    #   key: $3cR3t_K3y
+
+    leaf_interface_profiles:
+      - name: IntProf_1101
+        description: Leaf SERVER-LEAF-A Interface Profile
+        selectors:
+          - name: IfSele_Port_01
+            description: TO_LAPTOP1
+            policy_group: IntPolGrp_Laptop_access
+            port_blocks:
+              - name: Port1
+                description: ""
+                from_port: 1
+                to_port: 1
+          - name: IfSele_Port_02
+            description: ""
+            # policy_group: 
+            port_blocks:
+              - name: Port2
+                description: ""
+                from_port: 2
+                to_port: 2
+          - name: IfSele_Port_03
+            description: ""
+            #policy_group: 
+            port_blocks:
+              - name: Port3
+                description: ""
+                from_port: 3
+                to_port: 3
+          - name: IfSele_Port_04
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port4
+                description: ""
+                from_port: 4
+                to_port: 4
+          - name: IfSele_Port_05
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port5
+                description: ""
+                from_port: 5
+                to_port: 5
+          - name: IfSele_Port_06
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port6
+                description: ""
+                from_port: 6
+                to_port: 6
+          - name: IfSele_Port_07
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port7
+                description: ""
+                from_port: 7
+                to_port: 7
+          - name: IfSele_Port_08
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port8
+                description: ""
+                from_port: 8
+                to_port: 8
+          - name: IfSele_Port_09
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port9
+                description: ""
+                from_port: 9
+                to_port: 9
+          - name: IfSele_Port_10
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port10
+                description: ""
+                from_port: 10
+                to_port: 10
+          - name: IfSele_Port_11
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port11
+                description: ""
+                from_port: 11
+                to_port: 11
+          - name: IfSele_Port_12
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port12
+                description: ""
+                from_port: 12
+                to_port: 12
+          - name: IfSele_Port_13
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port13
+                description: ""
+                from_port: 13
+                to_port: 13
+          - name: IfSele_Port_14
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port14
+                description: ""
+                from_port: 14
+                to_port: 14
+          - name: IfSele_Port_15
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port15
+                description: ""
+                from_port: 15
+                to_port: 15
+          - name: IfSele_Port_16
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port16
+                description: ""
+                from_port: 16
+                to_port: 16
+          - name: IfSele_Port_17
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port17
+                description: ""
+                from_port: 17
+                to_port: 17
+          - name: IfSele_Port_18
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port18
+                description: ""
+                from_port: 18
+                to_port: 18
+          - name: IfSele_Port_19
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port19
+                description: ""
+                from_port: 19
+                to_port: 19
+          - name: IfSele_Port_20
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port20
+                description: ""
+                from_port: 20
+                to_port: 20
+          - name: IfSele_Port_21
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port21
+                description: ""
+                from_port: 21
+                to_port: 21
+          - name: IfSele_Port_22
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port22
+                description: ""
+                from_port: 22
+                to_port: 22
+          - name: IfSele_Port_23
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port23
+                description: ""
+                from_port: 23
+                to_port: 23
+          - name: IfSele_Port_24
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port24
+                description: ""
+                from_port: 24
+                to_port: 24
+          - name: IfSele_Port_25
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port25
+                description: ""
+                from_port: 25
+                to_port: 25
+          - name: IfSele_Port_26
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port26
+                description: ""
+                from_port: 26
+                to_port: 26
+          - name: IfSele_Port_27
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port27
+                description: ""
+                from_port: 27
+                to_port: 27
+          - name: IfSele_Port_28
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port28
+                description: ""
+                from_port: 28
+                to_port: 28
+          - name: IfSele_Port_29
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port29
+                description: ""
+                from_port: 29
+                to_port: 29
+          - name: IfSele_Port_30
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port30
+                description: ""
+                from_port: 30
+                to_port: 30
+          - name: IfSele_Port_31
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port31
+                description: ""
+                from_port: 31
+                to_port: 31
+          - name: IfSele_Port_32
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port32
+                description: ""
+                from_port: 32
+                to_port: 32
+          - name: IfSele_Port_33
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port33
+                description: ""
+                from_port: 33
+                to_port: 33
+          - name: IfSele_Port_34
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port34
+                description: ""
+                from_port: 34
+                to_port: 34
+          - name: IfSele_Port_35
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port35
+                description: ""
+                from_port: 35
+                to_port: 35
+          - name: IfSele_Port_36
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port36
+                description: ""
+                from_port: 36
+                to_port: 36
+          - name: IfSele_Port_37
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port37
+                description: ""
+                from_port: 37
+                to_port: 37
+          - name: IfSele_Port_38
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port38
+                description: ""
+                from_port: 38
+                to_port: 38
+          - name: IfSele_Port_39
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port39
+                description: ""
+                from_port: 39
+                to_port: 39
+          - name: IfSele_Port_40
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port40
+                description: ""
+                from_port: 40
+                to_port: 40
+          - name: IfSele_Port_41
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port41
+                description: ""
+                from_port: 41
+                to_port: 41
+          - name: IfSele_Port_42
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port42
+                description: ""
+                from_port: 42
+                to_port: 42
+          - name: IfSele_Port_43
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port43
+                description: ""
+                from_port: 43
+                to_port: 43
+          - name: IfSele_Port_44
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port44
+                description: ""
+                from_port: 44
+                to_port: 44
+          - name: IfSele_Port_45
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port45
+                description: ""
+                from_port: 45
+                to_port: 45
+          - name: IfSele_Port_46
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port46
+                description: ""
+                from_port: 46
+                to_port: 46
+          - name: IfSele_Port_47
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port47
+                description: ""
+                from_port: 47
+                to_port: 47
+          - name: IfSele_Port_48
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port48
+                description: ""
+                from_port: 48
+                to_port: 48
+
+      - name: IntProf_1102
+        description: Leaf 102 Interface Profile
+        selectors:
+          - name: IfSele_Port_01
+            description: TO_APIC_DEREK_1
+            # policy_group: 
+            port_blocks:
+              - name: Port1
+                description: ""
+                from_port: 1
+                to_port: 1
+          - name: IfSele_Port_02
+            description: ""
+            # policy_group: 
+            port_blocks:
+              - name: Port2
+                description: ""
+                from_port: 2
+                to_port: 2
+          - name: IfSele_Port_03
+            description: ""
+            #policy_group: 
+            port_blocks:
+              - name: Port3
+                description: ""
+                from_port: 3
+                to_port: 3
+          - name: IfSele_Port_04
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port4
+                description: ""
+                from_port: 4
+                to_port: 4
+          - name: IfSele_Port_05
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port5
+                description: ""
+                from_port: 5
+                to_port: 5
+          - name: IfSele_Port_06
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port6
+                description: ""
+                from_port: 6
+                to_port: 6
+          - name: IfSele_Port_07
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port7
+                description: ""
+                from_port: 7
+                to_port: 7
+          - name: IfSele_Port_08
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port8
+                description: ""
+                from_port: 8
+                to_port: 8
+          - name: IfSele_Port_09
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port9
+                description: ""
+                from_port: 9
+                to_port: 9
+          - name: IfSele_Port_10
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port10
+                description: ""
+                from_port: 10
+                to_port: 10
+          - name: IfSele_Port_11
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port11
+                description: ""
+                from_port: 11
+                to_port: 11
+          - name: IfSele_Port_12
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port12
+                description: ""
+                from_port: 12
+                to_port: 12
+          - name: IfSele_Port_13
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port13
+                description: ""
+                from_port: 13
+                to_port: 13
+          - name: IfSele_Port_14
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port14
+                description: ""
+                from_port: 14
+                to_port: 14
+          - name: IfSele_Port_15
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port15
+                description: ""
+                from_port: 15
+                to_port: 15
+          - name: IfSele_Port_16
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port16
+                description: ""
+                from_port: 16
+                to_port: 16
+          - name: IfSele_Port_17
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port17
+                description: ""
+                from_port: 17
+                to_port: 17
+          - name: IfSele_Port_18
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port18
+                description: ""
+                from_port: 18
+                to_port: 18
+          - name: IfSele_Port_19
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port19
+                description: ""
+                from_port: 19
+                to_port: 19
+          - name: IfSele_Port_20
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port20
+                description: ""
+                from_port: 20
+                to_port: 20
+          - name: IfSele_Port_21
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port21
+                description: ""
+                from_port: 21
+                to_port: 21
+          - name: IfSele_Port_22
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port22
+                description: ""
+                from_port: 22
+                to_port: 22
+          - name: IfSele_Port_23
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port23
+                description: ""
+                from_port: 23
+                to_port: 23
+          - name: IfSele_Port_24
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port24
+                description: ""
+                from_port: 24
+                to_port: 24
+          - name: IfSele_Port_25
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port25
+                description: ""
+                from_port: 25
+                to_port: 25
+          - name: IfSele_Port_26
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port26
+                description: ""
+                from_port: 26
+                to_port: 26
+          - name: IfSele_Port_27
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port27
+                description: ""
+                from_port: 27
+                to_port: 27
+          - name: IfSele_Port_28
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port28
+                description: ""
+                from_port: 28
+                to_port: 28
+          - name: IfSele_Port_29
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port29
+                description: ""
+                from_port: 29
+                to_port: 29
+          - name: IfSele_Port_30
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port30
+                description: ""
+                from_port: 30
+                to_port: 30
+          - name: IfSele_Port_31
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port31
+                description: ""
+                from_port: 31
+                to_port: 31
+          - name: IfSele_Port_32
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port32
+                description: ""
+                from_port: 32
+                to_port: 32
+          - name: IfSele_Port_33
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port33
+                description: ""
+                from_port: 33
+                to_port: 33
+          - name: IfSele_Port_34
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port34
+                description: ""
+                from_port: 34
+                to_port: 34
+          - name: IfSele_Port_35
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port35
+                description: ""
+                from_port: 35
+                to_port: 35
+          - name: IfSele_Port_36
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port36
+                description: ""
+                from_port: 36
+                to_port: 36
+          - name: IfSele_Port_37
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port37
+                description: ""
+                from_port: 37
+                to_port: 37
+          - name: IfSele_Port_38
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port38
+                description: ""
+                from_port: 38
+                to_port: 38
+          - name: IfSele_Port_39
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port39
+                description: ""
+                from_port: 39
+                to_port: 39
+          - name: IfSele_Port_40
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port40
+                description: ""
+                from_port: 40
+                to_port: 40
+          - name: IfSele_Port_41
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port41
+                description: ""
+                from_port: 41
+                to_port: 41
+          - name: IfSele_Port_42
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port42
+                description: ""
+                from_port: 42
+                to_port: 42
+          - name: IfSele_Port_43
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port43
+                description: ""
+                from_port: 43
+                to_port: 43
+          - name: IfSele_Port_44
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port44
+                description: ""
+                from_port: 44
+                to_port: 44
+          - name: IfSele_Port_45
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port45
+                description: ""
+                from_port: 45
+                to_port: 45
+          - name: IfSele_Port_46
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port46
+                description: ""
+                from_port: 46
+                to_port: 46
+          - name: IfSele_Port_47
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port47
+                description: ""
+                from_port: 47
+                to_port: 47
+          - name: IfSele_Port_48
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port48
+                description: ""
+                from_port: 48
+                to_port: 48
+    
+      - name: IntProf_1103
+        description: Leaf BORDER LEAF Interface Profile
+        selectors:
+          - name: IfSele_Port_01
+            description: TO_APIC_DEREK_1
+            # policy_group: 
+            port_blocks:
+              - name: Port1
+                description: ""
+                from_port: 1
+                to_port: 1
+          - name: IfSele_Port_02
+            description: ""
+            # policy_group: 
+            port_blocks:
+              - name: Port2
+                description: ""
+                from_port: 2
+                to_port: 2
+          - name: IfSele_Port_03
+            description: ""
+            #policy_group: 
+            port_blocks:
+              - name: Port3
+                description: ""
+                from_port: 3
+                to_port: 3
+          - name: IfSele_Port_04
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port4
+                description: ""
+                from_port: 4
+                to_port: 4
+          - name: IfSele_Port_05
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port5
+                description: ""
+                from_port: 5
+                to_port: 5
+          - name: IfSele_Port_06
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port6
+                description: ""
+                from_port: 6
+                to_port: 6
+          - name: IfSele_Port_07
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port7
+                description: ""
+                from_port: 7
+                to_port: 7
+          - name: IfSele_Port_08
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port8
+                description: ""
+                from_port: 8
+                to_port: 8
+          - name: IfSele_Port_09
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port9
+                description: ""
+                from_port: 9
+                to_port: 9
+          - name: IfSele_Port_10
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port10
+                description: ""
+                from_port: 10
+                to_port: 10
+          - name: IfSele_Port_11
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port11
+                description: ""
+                from_port: 11
+                to_port: 11
+          - name: IfSele_Port_12
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port12
+                description: ""
+                from_port: 12
+                to_port: 12
+          - name: IfSele_Port_13
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port13
+                description: ""
+                from_port: 13
+                to_port: 13
+          - name: IfSele_Port_14
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port14
+                description: ""
+                from_port: 14
+                to_port: 14
+          - name: IfSele_Port_15
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port15
+                description: ""
+                from_port: 15
+                to_port: 15
+          - name: IfSele_Port_16
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port16
+                description: ""
+                from_port: 16
+                to_port: 16
+          - name: IfSele_Port_17
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port17
+                description: ""
+                from_port: 17
+                to_port: 17
+          - name: IfSele_Port_18
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port18
+                description: ""
+                from_port: 18
+                to_port: 18
+          - name: IfSele_Port_19
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port19
+                description: ""
+                from_port: 19
+                to_port: 19
+          - name: IfSele_Port_20
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port20
+                description: ""
+                from_port: 20
+                to_port: 20
+          - name: IfSele_Port_21
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port21
+                description: ""
+                from_port: 21
+                to_port: 21
+          - name: IfSele_Port_22
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port22
+                description: ""
+                from_port: 22
+                to_port: 22
+          - name: IfSele_Port_23
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port23
+                description: ""
+                from_port: 23
+                to_port: 23
+          - name: IfSele_Port_24
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port24
+                description: ""
+                from_port: 24
+                to_port: 24
+          - name: IfSele_Port_25
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port25
+                description: ""
+                from_port: 25
+                to_port: 25
+          - name: IfSele_Port_26
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port26
+                description: ""
+                from_port: 26
+                to_port: 26
+          - name: IfSele_Port_27
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port27
+                description: ""
+                from_port: 27
+                to_port: 27
+          - name: IfSele_Port_28
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port28
+                description: ""
+                from_port: 28
+                to_port: 28
+          - name: IfSele_Port_29
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port29
+                description: ""
+                from_port: 29
+                to_port: 29
+          - name: IfSele_Port_30
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port30
+                description: ""
+                from_port: 30
+                to_port: 30
+          - name: IfSele_Port_31
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port31
+                description: ""
+                from_port: 31
+                to_port: 31
+          - name: IfSele_Port_32
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port32
+                description: ""
+                from_port: 32
+                to_port: 32
+          - name: IfSele_Port_33
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port33
+                description: ""
+                from_port: 33
+                to_port: 33
+          - name: IfSele_Port_34
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port34
+                description: ""
+                from_port: 34
+                to_port: 34
+          - name: IfSele_Port_35
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port35
+                description: ""
+                from_port: 35
+                to_port: 35
+          - name: IfSele_Port_36
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port36
+                description: ""
+                from_port: 36
+                to_port: 36
+          - name: IfSele_Port_37
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port37
+                description: ""
+                from_port: 37
+                to_port: 37
+          - name: IfSele_Port_38
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port38
+                description: ""
+                from_port: 38
+                to_port: 38
+          - name: IfSele_Port_39
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port39
+                description: ""
+                from_port: 39
+                to_port: 39
+          - name: IfSele_Port_40
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port40
+                description: ""
+                from_port: 40
+                to_port: 40
+          - name: IfSele_Port_41
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port41
+                description: ""
+                from_port: 41
+                to_port: 41
+          - name: IfSele_Port_42
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port42
+                description: ""
+                from_port: 42
+                to_port: 42
+          - name: IfSele_Port_43
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port43
+                description: ""
+                from_port: 43
+                to_port: 43
+          - name: IfSele_Port_44
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port44
+                description: ""
+                from_port: 44
+                to_port: 44
+          - name: IfSele_Port_45
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port45
+                description: ""
+                from_port: 45
+                to_port: 45
+          - name: IfSele_Port_46
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port46
+                description: ""
+                from_port: 46
+                to_port: 46
+          - name: IfSele_Port_47
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port47
+                description: ""
+                from_port: 47
+                to_port: 47
+          - name: IfSele_Port_48
+            description: ""
+            # policy_group:
+            port_blocks:
+              - name: Port48
+                description: ""
+                from_port: 48
+                to_port: 48
+          # - name: FEX101
+          #   fex_id: 101
+          #   fex_profile: LEAF101-FEX101
+          #   port_blocks:
+          #     - name: BLOCK1
+          #       from_port: 2
+          # - name: BRK-15
+          #   description: Breakout configuration
+          #   policy_group: BRK-10-4
+          #   port_blocks:
+          #     - name: 1-5
+          #       from_port: 5
+          # - name: BRK-151
+          #   description: Breakout port 1/5/1
+          #   policy_group: 10G-SERVER
+          #   sub_port_blocks:
+          #     - name: '1-5-1'
+          #       from_port: 5
+          #       from_sub_port: 1
+
+    leaf_switch_profiles:
+      - name: SwProf_1101
+        selectors:
+          - name: SwSele_1101
+            policy: 
+            node_blocks:
+              - name: BLOCK1
+                from: 1101
+                to: 1101
+        interface_profiles:
+          - IntProf_1101
+      - name: SwProf_1102
+        selectors:
+          - name: SwSele_1102
+            policy: 
+            node_blocks:
+              - name: BLOCK1
+                from: 1102
+                to: 1102
+        interface_profiles:
+          - IntProf_1102
+      - name: SwProf_1103
+        selectors:
+          - name: SwSele_1103
+            policy: 
+            node_blocks:
+              - name: BLOCK1
+                from: 1103
+                to: 1103
+        interface_profiles:
+          - IntProf_1103
+  
+
+    vlan_pools:
+      - name: VLP_Prd_31_32
+        allocation: static
+        ranges:
+          - from: 31
+            to: 32
+            description: "LAPTOP server-in-the-future"
+            allocation: static
+          # - from: 202
+          #   to: 202
+          #   description: "L3 peering to external router 2"
+          #   allocation: static
+          # - from: 1000
+          #   to: 1200
+          #   allocation: inherit
+
+    physical_domains:
+      - name: PhyDom_Test
+        vlan_pool: VLP_Prd_31_32
+
+    # routed_domains:
+    #   - name: all-tenant-vrfs
+    #     vlan_pool: all-vlans
+
+    aaeps:
+      - name: AEP_Phy
+        physical_domains:
+          - PhyDom_Test
+        # routed_domains:
+        #   - all-tenant-vrfs
+        # vmware_vmm_domains:
+        #   - vds1-dynamic-vlans
+
+    interface_policies:
+      cdp_policies:
+        - name: nac-cdp-enabled
+          admin_state: true
+        - name: nac-cdp-disabled
+          admin_state: false
+      lldp_policies:
+        - name: nac-lldp-enabled
+          admin_rx_state: true
+          admin_tx_state: true
+        - name: nac-lldp-disabled
+          admin_rx_state: false
+          admin_tx_state: false
+      # link_level_policies:
+      #   - name: nac-link-level-1G-auto
+      #     speed: 1G
+      #     auto: true
+      #     fec_mode: inherit
+      #   - name: nac-link-level-10G-auto
+      #     speed: 10G
+      #     auto: true
+      #     fec_mode: inherit
+      #   - name: nac-link-level-100G-auto
+      #     speed: 100G
+      #     auto: true
+      #     fec_mode: inherit
+      # port_channel_policies:
+      #   - name: nac-lacp-active
+      #     mode: active
+      #   - name: nac-mac-pinning
+      #     mode: mac-pin
+      # port_channel_member_policies:
+      #   - name: normal
+      #     rate: normal
+      #     priority: 32768
+      #   - name: fast
+      #     rate: fast
+      #     priority: 32768
+      # spanning_tree_policies:
+      #   - name: bpdu-filter
+      #     bpdu_filter: true
+      #   - name: bpdu-guard
+      #     bpdu_guard: true
+      # mcp_policies:
+      #   - name: mcp-enabled
+      #     admin_state: true
+      #   - name: mcp-disabled
+      #     admin_state: false
+
+    # spine_interface_policy_groups:
+    #   - name: external-isn-switches
+    #     link_level_policy: 
+    #     cdp_policy: nac-cdp-enabled
+    #     aaep: allow-all-vlans
+
+    # switch_policies:
+    #   forwarding_scale_policies:
+    #     - name: high-dual-stack
+    #       profile: high-dual-stack
+    #     - name: dual-stack
+    #       profile: dual-stack
+
+    # leaf_switch_policy_groups:
+    #   - name: all-leafs
+    #     forwarding_scale_policy: dual-stack
+
+    leaf_interface_policy_groups:
+      - name: IntPolGrp_Laptop_access
+        type: access
+        link_level_policy: 
+        cdp_policy: nac-cdp-enabled
+        lldp_policy: nac-lldp-enabled
+        # spanning_tree_policy: bpdu-filter
+        # mcp_policy: mcp-enabled
+        aaep: AEP_Phy
+
+      # - name: firewalls
+      #   type: access
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
+
+      # - name: linux-servers
+      #   type: access
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
+
+      # - name: hx-prod-fi-a
+      #   type: pc
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   lldp_policy: nac-lldp-enabled
+      #   port_channel_policy: nac-lacp-active
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
+
+      # - name: hx-prod-fi-b
+      #   type: pc
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   lldp_policy: nac-lldp-enabled
+      #   port_channel_policy: nac-lacp-active
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
+
+      # - name: n7000-a
+      #   type: vpc
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   lldp_policy: nac-lldp-enabled
+      #   port_channel_policy: nac-lacp-active
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
+
+      # - name: n7000-b
+      #   type: vpc
+      #   link_level_policy: nac-link-level-10G-auto
+      #   cdp_policy: nac-cdp-enabled
+      #   lldp_policy: nac-lldp-enabled
+      #   port_channel_policy: nac-lacp-active
+      #   spanning_tree_policy: bpdu-filter
+      #   mcp_policy: mcp-enabled
