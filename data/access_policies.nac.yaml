@@ -1238,6 +1238,20 @@ apic:
           # - from: 1000
           #   to: 1200
           #   allocation: inherit
+      - name: VLP_Server-VMM_34
+        allocation: static
+        ranges:
+          - from: 34
+            to: 34
+            description: "Server-VMM"
+            allocation: static
+          # - from: 202
+          #   to: 202
+          #   description: "L3 peering to external router 2"
+          #   allocation: static
+          # - from: 1000
+          #   to: 1200
+          #   allocation: inherit
 
     physical_domains:
       - name: PhyDom_Test
