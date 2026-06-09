@@ -1239,10 +1239,10 @@ apic:
           #   to: 1200
           #   allocation: inherit
       - name: VLP_Server-VMM_34
-        allocation: static
+        allocation: dynamic
         ranges:
-          - from: 34
-            to: 34
+          - from: 100
+            to: 200
             description: "Server-VMM"
             allocation: static
           # - from: 202

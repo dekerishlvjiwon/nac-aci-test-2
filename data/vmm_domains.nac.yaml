@@ -6,7 +6,7 @@ apic:
         delimiter: '|'
         tag_collection: true
         vlan_pool: VLP_Server-VMM_34
-        allocation: static
+        allocation: dynamic
         vswitch:
           cdp_policy: CDP-ENABLED
           lldp_policy: LLDP-ENABLED
