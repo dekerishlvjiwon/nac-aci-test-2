@@ -1,5 +1,9 @@
 apic:
   fabric_policies:
+    l2_mtu_policies:
+    - name: L2_1500
+      port_mtu_size: 1500
+
     vmware_vmm_domains:
       - name: VMMDOM_SERVER
         access_mode: read-write
@@ -10,6 +14,7 @@ apic:
         vswitch:
           cdp_policy: CDP-ENABLED
           lldp_policy: LLDP-ENABLED
+          mtu_policy: L2_1500
           # port_channel_policy: LACP-ACTIVE
           # netflow_exporter_policy: VMM-EXPORTER1
           # enhanced_lags:
