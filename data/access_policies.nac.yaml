@@ -28,7 +28,7 @@ apic:
                 to_port: 2
           - name: IfSele_Port_03
             description: ""
-            #policy_group: 
+            policy_group: IntPolGrp_VMM-SERVER_access
             port_blocks:
               - name: Port3
                 description: ""
@@ -1346,6 +1346,15 @@ apic:
         # spanning_tree_policy: bpdu-filter
         # mcp_policy: mcp-enabled
         aaep: AEP_Phy
+      - name: IntPolGrp_VMM-SERVER_access
+        type: access
+        link_level_policy: 
+        cdp_policy: nac-cdp-enabled
+        lldp_policy: nac-lldp-enabled
+        # spanning_tree_policy: bpdu-filter
+        # mcp_policy: mcp-enabled
+        aaep: AEP_VMM-SERVER
+
 
       # - name: firewalls
       #   type: access
