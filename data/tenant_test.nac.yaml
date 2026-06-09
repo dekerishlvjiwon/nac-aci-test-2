@@ -112,6 +112,57 @@ apic:
           #   - dhcp_relay_policy: DHCP-RELAY1
           #     dhcp_option_policy: DHCP-OPTION1
 
+        - name: BD_VMM
+          vrf: TEST-VRF
+          alias: BD_TEST3
+          mac: 00:22:BD:F8:19:FE
+          # virtual_mac: 00:23:BD:F8:19:12
+          ep_move_detection: true
+          arp_flooding: false
+          ip_dataplane_learning: true
+          limit_ip_learn_to_subnets: true
+          multi_destination_flooding: bd-flood
+          unknown_unicast: proxy
+          unknown_ipv4_multicast: flood
+          unknown_ipv6_multicast: flood
+          unicast_routing: true
+          # clear_remote_mac_entries: true
+          # advertise_host_routes: true
+          # l3_multicast: false
+          # multicast_arp_drop: false
+          # nd_interface_policy: "ND_INTF_POL1"
+          # endpoint_retention_policy: ERP1
+          # netflow_monitor_policies:
+          #   - name: MONITOR1
+          #   - ip_filter_type: ipv4
+          subnets:
+            - ip: 10.47.34.254/24
+              description: VMM-SERVER
+              primary_ip: false
+              public: true
+              shared: false
+              virtual: false
+              igmp_querier: false
+              nd_ra_prefix: true
+              no_default_gateway: false
+              ip_dataplane_learning: true
+            # - ip: fd00:0:abcd:1::1/64
+            #   description: My IPv6 Desc
+            #   primary_ip: true
+            #   public: true
+            #   shared: false
+            #   virtual: false
+            #   igmp_querier: true
+            #   nd_ra_prefix: true
+            #   no_default_gateway: false
+            #   nd_ra_prefix_policy: ND-RA-PREFIX1
+            #   ip_dataplane_learning: false
+          # l3outs:
+          #   - L3OUT1
+          # dhcp_labels:
+          #   - dhcp_relay_policy: DHCP-RELAY1
+          #     dhcp_option_policy: DHCP-OPTION1
+
       application_profiles:
         - name: WEB-1
           endpoint_groups:
@@ -154,6 +205,103 @@ apic:
                   vlan: 32
                   mode: untagged
                   deployment_immediacy: immediate
+              # static_leafs:
+              #   - pod_id: 1
+              #     node_id: 101
+              #     vlan: 135
+              #     primary_vlan: 136
+              #     mode: regular
+              #     deployment_immediacy: lazy
+              # static_endpoints:
+              #   - name: ST_EP1
+              #     mac: 00:00:00:00:00:01
+              #     ip: 1.1.1.1
+              #     type: silent-host
+              #     vlan: 123
+              #     node_id: 101
+              #     port: 1
+              contracts:
+                consumers:
+                  - CON_all_through_WEB1_laptop
+                providers:
+                  - CON_all_through_WEB1_laptop
+                # imported_consumers:
+                #   - IMPORT-CON1
+                # intra_epgs:
+                #   - CON1
+              # subnets:
+              #   - ip: 5.50.5.1/30
+              #     description: My Desc
+              #     public: true
+              #     shared: true
+              #     igmp_querier: true
+              #     nd_ra_prefix: true
+              #     no_default_gateway: false
+              #   - ip: 5.50.5.5/32
+              #     no_default_gateway: true
+              #     next_hop_ip: 8.8.8.8
+              #     ips_pools:
+              #       - name: POOL1
+              #         start_ip: 172.16.0.1
+              #         end_ip: 172.16.0.10
+              #         dns_server: dns.cisco.com
+              #         dns_search_suffix: cisco
+              #         dns_suffix: cisco
+              #         wins_server: wins
+                # - ip: fd00:0:abcd:2::2/64
+                #   description: My IPv6 Desc
+                #   public: true
+                #   shared: false
+                #   igmp_querier: true
+                #   nd_ra_prefix: true
+                #   no_default_gateway: true
+                #   nd_ra_prefix_policy: ND-RA-PREFIX1
+                #   ip_dataplane_learning: false
+              # tags:
+              #   - tag1
+              #   - tag2
+              # l4l7_virtual_ips:
+              #   - ip: 11.11.11.11
+              #     description: My LB VIP
+              # l4l7_address_pools:
+              #   - name: L4L7_POOL1
+              #     gateway_address: 11.11.11.254/24
+              #     from: 11.11.11.100
+              #     to: 11.11.11.200
+
+        - name: VMM_SERVERS
+          endpoint_groups:
+            - name: VMM_SERVERS-1
+              bridge_domain: BD_VMM
+              flood_in_encap: false
+              intra_epg_isolation: false
+              preferred_group: false
+              # data_plane_policing_policy: DPP1
+              # physical_domains:
+              #   - PhyDom_Test
+              vmware_vmm_domains:
+                - name: VMMDOM_SERVER
+                  u_segmentation: true
+                  delimiter: '|'
+                  # vlan:
+                  # primary_vlan: 100
+                  # secondary_vlan: 101
+                  netflow: false
+                  deployment_immediacy: immediate
+                  resolution_immediacy: immediate
+                  allow_promiscuous: reject
+                  forged_transmits: reject
+                  mac_changes: reject
+                  # elag: ELAGCustom
+                  # active_uplinks_order: 1,2
+                  # standby_uplinks: 3,4
+              # static_ports:
+              #   - node_id: 1101
+              #     description: TO LAPTOP
+              #     port: 1
+              #     vlan: 32
+              #     mode: untagged
+              #     deployment_immediacy: immediate
               # static_leafs:
               #   - pod_id: 1
               #     node_id: 101
