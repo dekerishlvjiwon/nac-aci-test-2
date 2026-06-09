@@ -19,7 +19,7 @@ apic:
           #     num_links: 3
         credential_policies:
           - name: 222241_cred
-            username: administrator@vsphere.local
+            username: administrator
             password: 2Password!
         vcenters:
           - name: 222241_vcenter
