@@ -25,7 +25,7 @@ apic:
           - name: 222241_vcenter
             hostname_ip: 172.17.224.143
             datacenter: Derek-terraform-DC
-            dvs_version: 8.0
+            dvs_version: unmanaged
             statistics: true
             credential_policy: 222241_cred
         uplinks:
