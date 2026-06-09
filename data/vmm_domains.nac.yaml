@@ -1,22 +1,45 @@
-# ---
-# apic:
-#   fabric_policies:
-#     vmware_vmm_domains:
-#       - name: vds1-managed
-#         access_mode: read-write
-#         tag_collection: true
-#         vlan_pool: all-vlans
-#         vswitch:
-#           cdp_policy: nac-cdp-enabled
-#           lldp_policy: nac-lldp-enabled
-#           port_channel_policy: nac-mac-pinning
-#         credential_policies:
-#           - name: credentials
-#             username: administrator@vsphere.local
-#             password: C1sco123
-#         vcenters:
-#           - name: vcenter1
-#             hostname_ip: 10.10.10.10
-#             datacenter: DC
-#             credential_policy: credentials
-#             dvs_version: 6.5
+apic:
+  fabric_policies:
+    vmware_vmm_domains:
+      - name: VMMDOM_SERVER
+        access_mode: read-write
+        delimiter: '|'
+        tag_collection: true
+        vlan_pool: VLP_Server-VMM_34
+        allocation: static
+        vswitch:
+          cdp_policy: CDP-ENABLED
+          lldp_policy: LLDP-ENABLED
+          # port_channel_policy: LACP-ACTIVE
+          # netflow_exporter_policy: VMM-EXPORTER1
+          # enhanced_lags:
+          #   - name: ELAGCUSTOM
+          #     mode: active
+          #     lb_mode: src-dst-l4port
+          #     num_links: 3
+        credential_policies:
+          - name: 222241_cred
+            username: administrator@vsphere.local
+            password: 2Password!
+        vcenters:
+          - name: 222241_vcenter
+            hostname_ip: 172.17.222.241
+            datacenter: Derek-terraform-DC
+            dvs_version: vCenter Default
+            statistics: true
+            credential_policy: 222241_cred
+        uplinks:
+          - id: 1
+            name: UPLINK1
+        #   - id: 2
+        #     name: UPLINK2
+        # trunk_port_groups:
+        #   - name: trunk_port_group_1
+        #     promiscuous_mode: true
+        #     immediacy: immediate
+        #     mac_change: true
+        #     forged_transmit: true
+        #     enhanced_lag_policy: ELAGCUSTOM
+        #     vlan_ranges:
+        #       - from: 12
+        #         to: 20

@@ -1267,8 +1267,9 @@ apic:
           - PhyDom_Test
         # routed_domains:
         #   - all-tenant-vrfs
-        # vmware_vmm_domains:
-        #   - vds1-dynamic-vlans
+      - name: AEP_VMM-SERVER
+        vmware_vmm_domains:
+          - VMMDOM_SERVER
 
     interface_policies:
       cdp_policies:
