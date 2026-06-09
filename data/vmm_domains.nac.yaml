@@ -19,11 +19,11 @@ apic:
           #     num_links: 3
         credential_policies:
           - name: 222241_cred
-            username: administrator
+            username: administrator@vsphere.local
             password: 2Password!
         vcenters:
           - name: 222241_vcenter
-            hostname_ip: 172.17.222.241
+            hostname_ip: 172.17.224.143
             datacenter: Derek-terraform-DC
             dvs_version: vCenter Default
             statistics: true
