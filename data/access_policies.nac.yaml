@@ -1244,7 +1244,7 @@ apic:
           - from: 100
             to: 200
             description: "Server-VMM"
-            allocation: static
+            allocation: dynamic
           # - from: 202
           #   to: 202
           #   description: "L3 peering to external router 2"
