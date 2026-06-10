@@ -500,3 +500,154 @@ apic:
             #   ethertype: ip
             #   protocol: udp
             #   # destination_to_port: 389
+
+      l3outs:
+        - name: L3OUT1
+          vrf: TEST-VRF
+          domain: L3Dom_L3OUT_VMM
+          # bfd_policy: BFD1
+          # dhcp_labels:
+          #   - dhcp_relay_policy: DHCP-RELAY1
+          #     dhcp_option_policy: DHCP-OPTION1
+          #     scope: tenant
+          # netflow_monitor_policies:
+          #   - name: MONITOR1
+          #     ip_filter_type: ipv4
+          # bgp:
+          #   timer_policy: BGP_TIMER1
+          #   as_path_policy: BGP_AS_PATH1
+          ospf:
+            area: 0
+            area_type: regular
+            area_cost: 1
+            auth_type: none
+            # auth_key: cisco
+            # auth_key_id: 1
+            # policy: OIP1
+          # interleak_route_map: ROUTE_MAP1
+          # default_route_leak_policy:
+          #   always: false
+          #   criteria: 'in-addition'
+          #   context_scope: false
+          #   outside_scope: false
+          # redistribution_route_maps:
+          #   - source: direct
+          #     route_map: ROUTE_MAP2
+          # dampening_ipv4_route_map: ROUTE_MAP3
+          # dampening_ipv6_route_map: ROUTE_MAP4
+          # bfd_multihop_node_policy: BFD-NODE1
+          # bfd_multihop_auth:
+          #   type: sha1
+          #   key_id: 1
+          #   key: Secure123
+          nodes:
+            - node_id: 1103
+              router_id: 172.17.227.41
+              router_id_as_loopback: false
+              # static_routes:
+              #   - prefix: 2.2.2.0/24
+              #     description: My Desc
+              #     preference: 1
+              #     next_hops:
+              #       - ip: 6.6.6.6
+              #         description: My Next Hop Desc
+              #         ip_sla_policy: IP_SLA1
+              interfaces:
+                - node_id: 1103
+                  port: 48
+                  svi: true
+                  # scope: local
+                  vlan: 33
+                  ip_a: 10.47.33.1/30
+                  # ip_b: 14.14.14.2/24
+                  # ip_shared: 14.14.14.3/24
+                  # ip_shared_dhcp_relay: true
+                  # link_local_address: fe80::ffff:ffff:ffff:ffff
+                  mode: native
+                  # bgp_peers:
+                    # - ip: 14.14.14.14
+                    #   remote_as: 65010
+                    #   description: My Desc
+                    #   allow_self_as: true
+                    #   as_override: true
+                    #   bfd: true
+                    #   disable_connected_check: true
+                    #   remove_private_as: true
+                    #   remove_all_private_as: true
+                    #   multicast_address_family: true
+                    #   ttl: 1
+                    #   weight: 0
+                    #   password: C1sco123
+                    #   local_as: 1234
+                    #   as_propagate: dual-as
+                    #   peer_prefix_policy: BGP_PP1
+                    #   export_route_control: ROUTE_MAP1
+                    #   import_route_control: ROUTE_MAP2
+                # - channel: PC1
+                #   vlan: 311
+                #   ip: 24.24.24.1/24
+                  # bgp_peers:
+                  #   - ip: 24.24.24.2
+                  #     remote_as: 65010
+                  # micro_bfd:
+                  #   destination_ip: 24.24.24.2
+                  #   start_timer: 120
+          # import_route_map:
+          #   name: example-import-name
+          #   description: desc
+          #   type: global
+          #   contexts:
+          #     - name: CONTEXT1
+          #       description: desc1
+          #       action: deny
+          #       order: 2
+          #       match_rules:
+          #       - MATCH1
+          #       set_rule: SET1
+          # route_maps:
+          #   - name: example-name
+          #     description: desc
+          #     type: global
+          #     contexts:
+          #     - name: CONTEXT1
+          #         description: desc1
+          #         action: deny
+          #         order: 2
+          #         match_rules:
+          #         - MATCH1
+          #         set_rule: SET1
+          # export_route_map:
+          #   name: example-export-name
+          #   contexts:
+          #     - name: CONTEXT1
+          #       match_rules:
+          #       - MATCH2
+          #       set_rule: SET2
+          external_endpoint_groups:
+            - name: EXT-EPG1
+              alias: ABC-EXT-EPG1
+              description: for L3_OUT_VMM
+              # preferred_group: false
+              # qos_class: level4
+              # target_dscp: CS5
+              # route_control_profiles:
+              #   - name: IMPORT-RCP1
+              #     direction: import
+              subnets:
+                - name: ALL
+                  prefix: 0.0.0.0/0
+              #     import_route_control: false
+              #     export_route_control: false
+              #     shared_route_control: false
+              #     import_security: true
+              #     shared_security: false
+              #     route_control_profiles:
+              #       - name: EXPORT-RCP1
+              #         direction: export
+              contracts:
+                consumers:
+                  - CON_all_through_all_allow
+                providers:
+                  - CON_all_through_all_allow
+                # imported_consumers:
+                #   - IMPORT-CON1

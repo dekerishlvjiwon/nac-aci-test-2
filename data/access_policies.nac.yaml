@@ -1164,7 +1164,7 @@ apic:
                 to_port: 47
           - name: IfSele_Port_48
             description: ""
-            # policy_group:
+            policy_group: IntPolGrp_L3OUT
             port_blocks:
               - name: Port48
                 description: ""
@@ -1252,14 +1252,21 @@ apic:
           # - from: 1000
           #   to: 1200
           #   allocation: inherit
+      - name: VLP_L3OUT
+        allocation: static
+        ranges:
+          - from: 33
+            to: 33
+            description: "L3OUT-TO-SDWAN"
+            allocation: static
 
     physical_domains:
       - name: PhyDom_Test
         vlan_pool: VLP_Prd_31_32
 
-    # routed_domains:
-    #   - name: all-tenant-vrfs
-    #     vlan_pool: all-vlans
+    routed_domains:
+      - name: L3Dom_L3OUT_VMM
+        vlan_pool: VLP_L3OUT
 
     aaeps:
       - name: AEP_Phy
@@ -1270,6 +1277,10 @@ apic:
       - name: AEP_VMM-SERVER
         vmware_vmm_domains:
           - VMMDOM_SERVER
+      - name: AEP_L3OUT
+        routed_domains:
+          - L3Dom_L3OUT_VMM
+    
 
     interface_policies:
       cdp_policies:
@@ -1354,6 +1365,14 @@ apic:
         # spanning_tree_policy: bpdu-filter
         # mcp_policy: mcp-enabled
         aaep: AEP_VMM-SERVER
+      - name: IntPolGrp_L3OUT
+        type: access
+        link_level_policy: 
+        cdp_policy: nac-cdp-enabled
+        lldp_policy: nac-lldp-enabled
+        # spanning_tree_policy: bpdu-filter
+        # mcp_policy: mcp-enabled
+        aaep: AEP_L3OUT
 
 
       # - name: firewalls
