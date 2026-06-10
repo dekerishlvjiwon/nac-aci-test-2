@@ -375,9 +375,9 @@ apic:
               # normalized_pctag: 1001
               contracts:
                 consumers:
-                  - CON_all_through_WEB1_laptop
+                  - CON_all_through_all_allow
                 providers:
-                  - CON_all_through_WEB1_laptop
+                  - CON_all_through_all_allow
                 # imported_consumers:
                 #   - IMPORTED-CON1
                 # intra_esgs:
@@ -410,9 +410,9 @@ apic:
               # normalized_pctag: 1001
               contracts:
                 consumers:
-                  - CON_all_through_WEB1_laptop
+                  - CON_all_through_all_allow
                 providers:
-                  - CON_all_through_WEB1_laptop
+                  - CON_all_through_all_allow
                 # imported_consumers:
                 #   - IMPORTED-CON1
                 # intra_esgs:
@@ -437,6 +437,31 @@ apic:
             - name: SUBJ_WEB1_laptop
               # alias: 
               description: web to laptop bidirectional
+              reverse_filter_ports: true
+              # service_graph: TEMPLATE1
+              # qos_class: level3
+              # target_dscp: AF13
+              filters:
+                - filter: tcp_udp_src_any_dst_any
+                  action: permit
+                  priority: default
+                  log: true
+                  no_stats: false
+                - filter: icmp_src_any_dst_any
+                  action: permit
+                  priority: default
+                  log: true
+                  no_stats: false
+        - name: CON_all_through_all_allow
+          # alias: 
+          description: ESG-ALL-ALLOW
+          scope: tenant
+          # qos_class: level3
+          # target_dscp: AF13
+          subjects:
+            - name: SUBJ_VMM_ALL_ALLOW
+              # alias: 
+              description: VMM_ESG_ALL_ALLOW
               reverse_filter_ports: true
               # service_graph: TEMPLATE1
               # qos_class: level3
