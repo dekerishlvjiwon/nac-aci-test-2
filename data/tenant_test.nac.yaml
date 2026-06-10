@@ -317,11 +317,11 @@ apic:
               #     vlan: 123
               #     node_id: 101
               #     port: 1
-              contracts:
-                consumers:
-                  - CON_all_through_WEB1_laptop
-                providers:
-                  - CON_all_through_WEB1_laptop
+              # contracts:
+              #   consumers:
+              #     - CON_all_through_WEB1_laptop
+              #   providers:
+              #     - CON_all_through_WEB1_laptop
                 # imported_consumers:
                 #   - IMPORT-CON1
                 # intra_epgs:
@@ -365,6 +365,66 @@ apic:
               #     gateway_address: 11.11.11.254/24
               #     from: 11.11.11.100
               #     to: 11.11.11.200
+          endpoint_security_groups:
+            - name: ESG1
+              description: server-1
+              vrf: TEST-VRF
+              shutdown: false
+              intra_esg_isolation: false
+              preferred_group: false
+              # normalized_pctag: 1001
+              contracts:
+                consumers:
+                  - CON_all_through_WEB1_laptop
+                providers:
+                  - CON_all_through_WEB1_laptop
+                # imported_consumers:
+                #   - IMPORTED-CON1
+                # intra_esgs:
+                #   - CON3
+                # masters:
+                #   - application_profile: VMM_SERVERS
+                #     endpoint_security_group: ESG1
+              tag_selectors:
+                - key: __vmm::vmname
+                  operator: equals
+                  value: Linux-1
+                  description: Linux-1
+              # epg_selectors:
+              #   - application_profile: AP1
+              #     endpoint_group: EPG1
+              #     description: EPG Selector 1
+              # ip_subnet_selectors:
+              #   - value: 10.1.1.0/24
+              #     description: IP Subnet Selector 1
+              # ip_external_subnet_selectors:
+              #   - ip: 10.10.10.0/24
+              #     shared: true
+              #     description: IPExternal Subnet Selector
+            - name: ESG2
+              description: server-2
+              vrf: TEST-VRF
+              shutdown: false
+              intra_esg_isolation: false
+              preferred_group: false
+              # normalized_pctag: 1001
+              contracts:
+                consumers:
+                  - CON_all_through_WEB1_laptop
+                providers:
+                  - CON_all_through_WEB1_laptop
+                # imported_consumers:
+                #   - IMPORTED-CON1
+                # intra_esgs:
+                #   - CON3
+                # masters:
+                #   - application_profile: VMM_SERVERS
+                #     endpoint_security_group: ESG2
+              tag_selectors:
+                - key: __vmm::vmname
+                  operator: equals
+                  value: Linux-2
+                  description: Linux-2
 
       contracts:
         - name: CON_all_through_WEB1_laptop
