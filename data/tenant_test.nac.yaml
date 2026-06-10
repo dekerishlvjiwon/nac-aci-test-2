@@ -558,7 +558,7 @@ apic:
                   svi: true
                   # scope: local
                   vlan: 33
-                  ip_a: 10.47.33.1/30
+                  ip: 10.47.33.1/30
                   # ip_b: 14.14.14.2/24
                   # ip_shared: 14.14.14.3/24
                   # ip_shared_dhcp_relay: true
