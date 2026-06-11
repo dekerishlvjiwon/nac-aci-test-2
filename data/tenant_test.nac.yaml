@@ -572,7 +572,7 @@ apic:
                   # ip_shared: 14.14.14.3/24
                   # ip_shared_dhcp_relay: true
                   # link_local_address: fe80::ffff:ffff:ffff:ffff
-                  mode: native
+                  # mode: native
                   # bgp_peers:
                     # - ip: 14.14.14.14
                     #   remote_as: 65010
