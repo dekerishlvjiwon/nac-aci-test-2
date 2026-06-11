@@ -157,8 +157,8 @@ apic:
             #   no_default_gateway: false
             #   nd_ra_prefix_policy: ND-RA-PREFIX1
             #   ip_dataplane_learning: false
-          # l3outs:
-          #   - L3OUT1
+          l3outs:
+            - L3OUT1
           # dhcp_labels:
           #   - dhcp_relay_policy: DHCP-RELAY1
           #     dhcp_option_policy: DHCP-OPTION1
